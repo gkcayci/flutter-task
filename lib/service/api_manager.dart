@@ -15,8 +15,8 @@ class ApiManager {
   }
 
   Future<List<Model>> getAllModel() async {
-    final getUser = await http.get(Uri.parse('https://remoteok.io/api'));
-    final List responseBody = jsonDecode(getUser.body);
+    final getJob = await http.get(Uri.parse('https://remoteok.io/api'));
+    final List responseBody = jsonDecode(getJob.body);
     return responseBody.map((e) => Model.fromJson(e)).toList();
   }
 }
